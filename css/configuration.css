@@ -1,0 +1,84 @@
+#config-overlay {
+  text-align: center;
+}
+
+#config-overlay h2 {
+  margin: 0.5rem 0;
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.form-control input {
+  width: 15rem;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 0.35rem;
+  font: inherit;
+}
+
+#game-configuration {
+  width: 90%;
+  max-width: 40rem;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  #game-configuration {
+    margin: 1rem auto;
+  }
+}
+
+#game-configuration ol {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 425px) {
+  #game-configuration ol {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#game-configuration li {
+  margin: 1rem;
+  padding: 1rem;
+  width: 50%;
+  background-color: rgb(243, 227, 255);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+#game-configuration h2 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#game-configuration h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: rgb(94, 4, 168);
+}
+
+@media screen and (max-width: 550px) {
+  #game-configuration h3 {
+    font-size: 1rem;
+  }
+}
+
+.player-symbol {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(47, 4, 82);
+}
