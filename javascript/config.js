@@ -3,14 +3,15 @@ const openPlayerConfig = (event) => {
   playerConfigOverlayElement.style.display = 'block';
   backdropElement.style.display = 'block';
   inputConfigElement.focus();
-  formElement.classList.remove('error');
 };
 
 const closePlayerConfig = () => {
   playerConfigOverlayElement.style.display = 'none';
   backdropElement.style.display = 'none';
 
-  errorsOutputElement.textContent = ' ';
+  errorsOutputElement.textContent = '';
+  inputConfigElement.value = '';
+  formElement.classList.remove('error');
 };
 
 const savePlayerConfig = (event) => {
@@ -19,8 +20,17 @@ const savePlayerConfig = (event) => {
   const enteredPlayerName = formData.get('playername').trim();
 
   if (!enteredPlayerName) {
-    event.target.firstElementChild.classList.add('error');
+    formElement.classList.add('error');
     errorsOutputElement.textContent = 'Please enter a valid name!';
     return;
   }
+
+  const updatedPlayerDataElement = document.getElementById(
+    `player-${editedPlayer}-data`
+  );
+  updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
+
+  players[editedPlayer - 1].name = enteredPlayerName;
+
+  closePlayerConfig();
 };
