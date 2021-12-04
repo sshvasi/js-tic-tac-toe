@@ -8,4 +8,6 @@ const inputConfigElement = document.getElementById('playername');
 
 edit1PlayerBtnElement.addEventListener('click', openPlayerConfig);
 edit2PlayerBtnElement.addEventListener('click', openPlayerConfig);
+
 cancelConfigBtnElement.addEventListener('click', closePlayerConfig);
+backdropElement.addEventListener('click', closePlayerConfig);
